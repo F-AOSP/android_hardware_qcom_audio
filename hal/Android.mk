@@ -202,6 +202,10 @@ ifeq ($(strip $(AUDIO_FEATURE_ENABLED_HWDEP_CAL)),true)
     LOCAL_CFLAGS += -DHWDEP_CAL_ENABLED
 endif
 
+ifeq ($(strip $(USES_OLD_DEEP_BUFFER_COUNT_VALUE)),true)
+    LOCAL_CFLAGS += -DOLD_DEEP_BUFFER_COUNT_VALUE
+endif
+
 LOCAL_COPY_HEADERS_TO   := mm-audio
 LOCAL_COPY_HEADERS      := audio_extn/audio_defs.h
 
